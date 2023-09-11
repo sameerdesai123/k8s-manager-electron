@@ -2,11 +2,44 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Hello World!</title>
+    <title>K8s Manager</title>
     <link rel="stylesheet" href="index.css" />
+    <link defer rel="stylesheet" href="../node_modules/bulma/css/bulma.min.css">
+
+    <script defer src="./render.js"></script>
   </head>
   <body>
-    <h1>💖 Hello World!</h1>
-    <p>Welcome to your Electron application.</p>
+    <div class="container">
+      <div class="box">
+        <div class="columns">
+          <div class="column">
+            <div class="is-dark">
+              Context: <span id="currentContextValue" ></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="box">
+        <div class="columns">
+          <div class="dropdown column">
+            <div class="dropdown-trigger" aria-haspopup="true" aria-controls="dropdown-menu" id="contextSelector">
+              <button class="button">
+                <span>Select Context</span>
+                <span class="icon is-small">
+                  <i class="fas fa-angle-down"></i>
+                </span>
+              </button>
+            </div>
+            <div class="dropdown-menu column" id="dropdown-menu" role="menu">
+              <div class="dropdown-content">
+                <!-- Dropdown items will be added here dynamically -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </body>
 </html>
